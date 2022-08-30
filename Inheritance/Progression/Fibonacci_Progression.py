@@ -12,7 +12,7 @@ class FibonacciProgression(Progression):
         '''
         Creating a new Fibonacci Progression.
         '''
-        super.__init__(first)           # initializing the first value
+        super().__init__(first)           # initializing the first value
         self._prev = second - first
         
     def _advance(self):                 # Override the inherited method

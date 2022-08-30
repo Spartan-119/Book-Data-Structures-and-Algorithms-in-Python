@@ -12,7 +12,7 @@ class GeometricProgression(Progression):
         '''
         Creating a new Geometric Progression.
         '''
-        super.__init__(start)           # initializing the first value
+        super().__init__(start)           # initializing the first value
         self._factor = factor
         
     def _advance(self):                 # Override the inherited method

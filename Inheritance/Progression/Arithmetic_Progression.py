@@ -12,7 +12,7 @@ class ArithmeticProgression(Progression):
         '''
         Creating a new Arithmetic Progression.
         '''
-        super.__init__(start)           # initializing the base
+        super().__init__(start)           # initializing the base
         self._increment = increment
         
     def _advance(self):                 # Override the inherited method
