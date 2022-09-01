@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-READ TILL PAGE 85 (107 OF 770)
+READ TILL PAGE 92 (114 OF 770)
 
 Created on Mon Aug 29 03:58:31 2022
 
@@ -55,7 +55,12 @@ class CreditCard:
         '''
         Process customer payment that reduces balance.
         '''
-        self._balance -= amount
+        if not isinstance(amount, (int, float)):
+            raise TypeError('The amount must be a number.')
+        elif amount < 0:
+            raise ValueError('The amount must be a non-negative number.')
+        else:
+            self._balance -= amount
         
 cc = CreditCard('John Doe', '1st Bank', '5391 0375 9387 5309', 1000)
 
